@@ -3,8 +3,8 @@ FROM alpine:3.8
 ENV RCLONE_VERSION="1.42"
 
 RUN apk --no-cache add \
-    curl \
     ca-certificates \
+    curl \
     unzip \
  && addgroup -g 1000 rclone \
  && adduser -D -G rclone -s /bin/sh -u 1000 rclone
