@@ -13,11 +13,10 @@ WORKDIR /tmp
 
 RUN curl -O https://downloads.rclone.org/v${RCLONE_VERSION}/rclone-v${RCLONE_VERSION}-linux-amd64.zip \
  && echo "7a623f60a5995f33cca3ed285210d8701c830f6f34d4dc50d74d75edd6a5bfa6  rclone-v1.42-linux-amd64.zip" | sha256sum -c - \
- && unzip rclone-v${RCLONE_VERSION}-linux-amd64.zip -d /tmp \
- && apk del --no-cache curl unzip \
- && mv /tmp/rclone-v${RCLONE_VERSION}-linux-amd64/rclone /usr/bin \
- && rm -r /tmp/rclone* \
- && rm -rf /tmp/* /var/tmp/* /var/cache/apk/*
+ && unzip rclone-v${RCLONE_VERSION}-linux-amd64.zip \
+ && mv rclone-v${RCLONE_VERSION}-linux-amd64/rclone /usr/bin \
+ && rm -r rclone-v${RCLONE_VERSION}-linux-amd64* \
+ && apk del --purge curl unzip
 
 USER rclone
 WORKDIR /home/rclone
