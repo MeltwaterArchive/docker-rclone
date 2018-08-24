@@ -7,6 +7,9 @@
 Custom Docker build of [Rclone].
 Runs as non-root user `rclone`.
 
+The default config file can be mounted at
+`/home/rclone/.config/rclone/rclone.conf`.
+
 [Rclone]: https://rclone.org/
 
 ## License
