@@ -22,5 +22,3 @@ USER rclone
 WORKDIR /home/rclone
 
 ENTRYPOINT ["/usr/bin/rclone"]
-
-CMD ["--version"]
