@@ -16,7 +16,7 @@ The default config file can be mounted at
 
 The all files in this repository are licensed under the MIT license.
 
-## rclone License
+## Rclone License
 
 The MIT License (MIT)
 Copyright (C) 2012 by Nick Craig-Wood http://www.craig-wood.com/nick/
